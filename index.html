@@ -57,7 +57,70 @@
     </div>
   </nav>
 
-  <!-- Hero, Leistungen, Materialien, Galerie ... (bleiben gleich) -->
+  <!-- Hero -->
+  <section class="hero-bg h-screen flex items-center relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-6 text-center z-10">
+      <div class="inline-flex items-center gap-2 bg-zinc-900/80 px-6 py-2 rounded-full mb-8 border border-cyan-500/30">
+        <div class="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
+        <span class="text-sm font-medium tracking-widest" id="hero-tagline">3D DRUCK • PROTOTYPEN • SERIENFERTIGUNG</span>
+      </div>
+      
+      <h1 id="hero-title" class="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tighter">
+        Präzise Prototypen.<br>Perfekte Fertigung.
+      </h1>
+      <p id="hero-subtitle" class="text-lg md:text-2xl text-zinc-400 max-w-2xl mx-auto mb-12">
+        Von der Idee zum funktionsfähigen Prototypen – schnell, hochwertig und in allen gängigen FDM-Materialien.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#kontakt" id="btn-start" class="px-10 py-4 bg-cyan-500 hover:bg-cyan-400 transition text-black font-semibold rounded-2xl text-lg">Jetzt Projekt anfragen</a>
+        <a href="#materialien" id="btn-materials" class="px-10 py-4 border border-zinc-600 hover:border-zinc-400 transition font-semibold rounded-2xl text-lg">Materialien entdecken</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leistungen -->
+  <section id="leistungen" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 id="section-services" class="text-4xl font-bold text-center mb-16">Was wir für Sie tun</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-zinc-950 p-10 rounded-3xl border border-zinc-800 hover:border-cyan-500/50 transition">
+          <h3 id="service1-title" class="text-2xl font-semibold mb-4">Design & Entwicklung</h3>
+          <p id="service1-desc" class="text-zinc-400">CAD-Design, Optimierung für den 3D-Druck und funktionsfähige Prototypen.</p>
+        </div>
+        <div class="bg-zinc-950 p-10 rounded-3xl border border-zinc-800 hover:border-cyan-500/50 transition">
+          <h3 id="service2-title" class="text-2xl font-semibold mb-4">Prototypenfertigung</h3>
+          <p id="service2-desc" class="text-zinc-400">Schnelle Iterationen mit hoher Präzision – ab 0,05 mm Schichthöhe.</p>
+        </div>
+        <div class="bg-zinc-950 p-10 rounded-3xl border border-zinc-800 hover:border-cyan-500/50 transition">
+          <h3 id="service3-title" class="text-2xl font-semibold mb-4">Klein- & Großserien</h3>
+          <p id="service3-desc" class="text-zinc-400">Zuverlässige Produktion von 1 bis mehreren tausend Teilen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materialien -->
+  <section id="materialien" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 id="section-materials" class="text-4xl font-bold text-center mb-6">FDM-Materialien</h2>
+      <p id="materials-subtitle" class="text-center text-zinc-400 mb-16 max-w-2xl mx-auto">Wir drucken mit allen gängigen und hochtechnischen Filamenten.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="material-grid"></div>
+    </div>
+  </section>
+
+  <!-- Galerie -->
+  <section class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 id="section-gallery" class="text-4xl font-bold text-center mb-16">Unsere Prototypen in der Praxis</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <img src="images/prototyp1.jpg" class="gallery-img rounded-3xl aspect-square object-cover" alt="3D gedruckter Prototyp 1">
+        <img src="images/prototyp2.jpg" class="gallery-img rounded-3xl aspect-square object-cover" alt="3D gedruckter Prototyp 2">
+        <img src="images/prototyp3.jpg" class="gallery-img rounded-3xl aspect-square object-cover" alt="3D gedruckter Prototyp 3">
+        <img src="images/prototyp4.jpg" class="gallery-img rounded-3xl aspect-square object-cover" alt="3D gedruckter Prototyp 4">
+      </div>
+    </div>
+  </section>
 
   <!-- Kontakt -->
   <section id="kontakt" class="py-24 bg-black">
@@ -86,7 +149,7 @@
         </div>
       </form>
 
-      <!-- Eigene Erfolgsmeldung (jetzt voll mehrsprachig) -->
+      <!-- Eigene Erfolgsmeldung -->
       <div id="success-message" class="hidden bg-emerald-900/30 border border-emerald-500 p-10 rounded-3xl text-center mt-8">
         <i class="fa-solid fa-check-circle text-6xl text-emerald-400 mb-6"></i>
         <h3 id="success-title" class="text-3xl font-bold mb-3">Vielen Dank!</h3>
@@ -98,10 +161,20 @@
     </div>
   </section>
 
-  <!-- Footer, Cookie Banner, Impressum Modal bleiben gleich wie vorher -->
+  <!-- Footer -->
+  <footer class="bg-zinc-950 py-12 border-t border-zinc-900">
+    <div class="max-w-7xl mx-auto px-6 text-center text-sm text-zinc-500">
+      <p>© 2026 Fuehring Protoworks • 
+         <a href="#" onclick="showImpressum()" class="hover:text-zinc-300" id="footer-impressum">Impressum</a> • 
+         <a href="#" onclick="showCookiePolicy()" class="hover:text-zinc-300">Cookie-Richtlinie</a></p>
+      <p class="mt-2" id="footer-made">Hochpräziser FDM 3D-Druck • Made in Austria • Made in Spain</p>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner, Cookie-Modal, Impressum-Modal (wie vorher) -->
 
   <script>
-    // ==================== Vollständige Übersetzungen (inkl. Erfolgsmeldung) ====================
+    // ==================== Vollständige Übersetzungen ====================
     const translations = {
       de: {
         navBrand: "Fuehring Protoworks", navHome: "Home", navMaterials: "Materialien", navServices: "Leistungen", navContact: "Kontakt",
@@ -168,7 +241,24 @@
       }
     };
 
-    const materials = { /* deine 12 Materialien wie vorher */ };
+    const materials = {
+      de: [
+        {name: "PLA", desc: "Einfach zu drucken, ideal für visuelle Prototypen", color: "text-green-400"},
+        {name: "PETG", desc: "Robust, chemikalienbeständig und sehr fest", color: "text-blue-400"},
+        {name: "ABS", desc: "Hohe Schlagfestigkeit, gut nachbearbeitbar", color: "text-orange-400"},
+        {name: "ASA", desc: "Wetter- und UV-beständig", color: "text-amber-400"},
+        {name: "TPU", desc: "Flexibel und gummiartig", color: "text-purple-400"},
+        {name: "Nylon (PA)", desc: "Extrem zäh und verschleißfest", color: "text-red-400"},
+        {name: "PC", desc: "Höchste Schlag- und Hitzebeständigkeit", color: "text-cyan-400"},
+        {name: "PA-CF", desc: "Kohlefaser-verstärkt, extrem steif und fest", color: "text-cyan-400"},
+        {name: "PETG-CF", desc: "Kohlefaser-verstärktes PETG, hohe Steifigkeit", color: "text-cyan-400"},
+        {name: "PPS-CF", desc: "Hochtemperaturbeständig, chemikalienresistent, sehr steif", color: "text-amber-400"},
+        {name: "PEEK", desc: "Höchstleistungsmaterial, extrem hitze- und chemikalienbeständig", color: "text-red-400"},
+        {name: "PEI (Ultem)", desc: "Hochtemperaturbeständig, flammhemmend, sehr stabil", color: "text-orange-400"}
+      ],
+      en: [ /* englische Version */ ],
+      es: [ /* spanische Version */ ]
+    };
 
     function renderMaterials(lang) {
       const grid = document.getElementById('material-grid');
@@ -185,15 +275,40 @@
       const lang = document.getElementById('lang-select').value;
       const t = translations[lang];
 
-      // Alle anderen Texte...
+      // Alle Texte aktualisieren
       document.getElementById('nav-brand').textContent = t.navBrand;
-      // ... (alle anderen IDs wie vorher)
-
+      document.getElementById('nav-home').textContent = t.navHome;
+      document.getElementById('nav-materials').textContent = t.navMaterials;
+      document.getElementById('nav-services').textContent = t.navServices;
+      document.getElementById('nav-contact').textContent = t.navContact;
+      document.getElementById('hero-tagline').textContent = t.heroTagline;
+      document.getElementById('hero-title').innerHTML = t.heroTitle;
+      document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
+      document.getElementById('btn-start').textContent = t.btnStart;
+      document.getElementById('btn-materials').textContent = t.btnMaterials;
+      document.getElementById('section-services').textContent = t.sectionServices;
+      document.getElementById('service1-title').textContent = t.service1Title;
+      document.getElementById('service1-desc').textContent = t.service1Desc;
+      document.getElementById('service2-title').textContent = t.service2Title;
+      document.getElementById('service2-desc').textContent = t.service2Desc;
+      document.getElementById('service3-title').textContent = t.service3Title;
+      document.getElementById('service3-desc').textContent = t.service3Desc;
+      document.getElementById('section-materials').textContent = t.sectionMaterials;
+      document.getElementById('materials-subtitle').textContent = t.materialsSubtitle;
+      document.getElementById('section-gallery').textContent = t.sectionGallery;
       document.getElementById('contact-title').textContent = t.contactTitle;
       document.getElementById('slogan').textContent = t.slogan;
       document.getElementById('contact-subtitle').textContent = t.contactSubtitle;
+      document.getElementById('footer-impressum').textContent = t.footerImpressum;
+      document.getElementById('footer-made').textContent = t.footerMade;
 
-      // Erfolgsmeldung übersetzen
+      // Formular-Platzhalter aktualisieren
+      document.getElementById('input-name').placeholder = t.inputName || "Name *";
+      document.getElementById('input-email').placeholder = t.inputEmail || "E-Mail *";
+      document.getElementById('input-firma').placeholder = t.inputFirma || "Firma (optional)";
+      document.getElementById('input-nachricht').placeholder = t.inputNachricht || "Beschreibung Ihres Projekts *";
+
+      // Erfolgsmeldung aktualisieren
       document.getElementById('success-title').textContent = t.successTitle;
       document.getElementById('success-text').innerHTML = t.successText;
       document.getElementById('new-request-btn').textContent = t.newRequestBtn;
@@ -206,6 +321,30 @@
       const icon = document.querySelector('#dark-toggle i');
       icon.classList.toggle('fa-moon');
       icon.classList.toggle('fa-sun');
+    }
+
+    function acceptNecessary() {
+      localStorage.setItem('cookieConsent', 'necessary');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    function acceptAll() {
+      localStorage.setItem('cookieConsent', 'all');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    function showCookiePolicy() {
+      document.getElementById('cookie-modal').classList.remove('hidden');
+    }
+    function hideCookiePolicy() {
+      document.getElementById('cookie-modal').classList.add('hidden');
+    }
+
+    function showImpressum() {
+      document.getElementById('impressum-modal').classList.remove('hidden');
+    }
+    function hideImpressum() {
+      document.getElementById('impressum-modal').classList.add('hidden');
     }
 
     // Formular-Handling
