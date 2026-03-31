@@ -302,21 +302,22 @@
       alert("Impressum:\nFuehring Protoworks\n7011 Siegendorf, Flurgasse 109\nÖsterreich\nE-Mail: office@fprotoworks.com");
     }
 
-    // Formular-Handling mit Zapier Webhook
-    const form = document.getElementById('contact-form');
-    const successMsg = document.getElementById('success-message');
-    const submitBtn = document.getElementById('submit-btn');
+    
+  // Formular-Handling für Zapier Webhook
+  const form = document.getElementById('contact-form');
+  const successMsg = document.getElementById('success-message');
+  const submitBtn = document.getElementById('submit-btn');
 
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      submitBtn.innerHTML = 'Wird gesendet...';
-      submitBtn.disabled = true;
+  form.addEventListener('submit', function(e) {
+    submitBtn.innerHTML = 'Wird gesendet...';
+    submitBtn.disabled = true;
 
-      setTimeout(() => {
-        form.style.display = 'none';
-        successMsg.classList.remove('hidden');
-      }, 800);
-    });
+    // Kein preventDefault() mehr – Zapier braucht den normalen POST
+    // Die Seite wird nach dem Absenden automatisch neu geladen durch Zapier
+  });
+
+  // Rest der changeLanguage Funktion bleibt gleich...
+</script>
 
     // Start
     window.onload = () => {
