@@ -108,43 +108,43 @@
   </section>
 
   <!-- Kontakt -->
-  <section id="kontakt" class="py-24 bg-black">
-    <div class="max-w-2xl mx-auto px-6">
-      <div class="text-center mb-12">
-        <h2 id="contact-title" class="text-4xl font-bold mb-4">Projekt starten</h2>
-        <p id="slogan" class="text-3xl font-medium text-cyan-400">"Red ma drüber"</p>
-        <p id="contact-subtitle" class="text-zinc-400 mt-2">Egal ob Idee, Skizze oder fertiges CAD – wir sprechen darüber und machen es real.</p>
-      </div>
+<section id="kontakt" class="py-24 bg-black">
+  <div class="max-w-2xl mx-auto px-6">
+    <div class="text-center mb-12">
+      <h2 id="contact-title" class="text-4xl font-bold mb-4">Projekt starten</h2>
+      <p id="slogan" class="text-3xl font-medium text-cyan-400">"Red ma drüber"</p>
+      <p id="contact-subtitle" class="text-zinc-400 mt-2">Egal ob Idee, Skizze oder fertiges CAD – wir sprechen darüber und machen es real.</p>
+    </div>
 
-      <form id="contact-form" 
-            action="https://hooks.zapier.com/hooks/catch/27011790/unkmkqb/" 
-            method="POST" 
-            class="bg-zinc-900 p-10 rounded-3xl">
-        <div class="space-y-6">
-          <input type="text" name="name" id="input-name" placeholder="Name *" required class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl">
-          <input type="email" name="email" id="input-email" placeholder="E-Mail *" required class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl">
-          <input type="text" name="firma" id="input-firma" placeholder="Firma (optional)" class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl">
-          <textarea name="nachricht" id="input-nachricht" rows="6" placeholder="Beschreibung Ihres Projekts *" required class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl"></textarea>
-          
-          <input type="hidden" name="source" value="Website">
+    <form id="contact-form" 
+          action="https://hooks.zapier.com/hooks/catch/27011790/unkmkqb/" 
+          method="POST" 
+          class="bg-zinc-900 p-10 rounded-3xl">
+      <div class="space-y-6">
+        <input type="text" name="name" id="input-name" placeholder="Name *" required class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl">
+        <input type="email" name="email" id="input-email" placeholder="E-Mail *" required class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl">
+        <input type="text" name="firma" id="input-firma" placeholder="Firma (optional)" class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl">
+        <textarea name="nachricht" id="input-nachricht" rows="6" placeholder="Beschreibung Ihres Projekts *" required class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl"></textarea>
+        
+        <input type="hidden" name="source" value="Website">
 
-          <button type="submit" id="submit-btn" class="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-5 rounded-2xl text-lg">
-            Anfrage absenden
-          </button>
-        </div>
-      </form>
-
-      <!-- Erfolgsmeldung -->
-      <div id="success-message" class="hidden bg-emerald-900/30 border border-emerald-500 p-10 rounded-3xl text-center mt-8">
-        <i class="fa-solid fa-check-circle text-6xl text-emerald-400 mb-6"></i>
-        <h3 id="success-title" class="text-3xl font-bold mb-3">Vielen Dank!</h3>
-        <p id="success-text" class="text-zinc-300 text-lg">Ihre Anfrage wurde erfolgreich übermittelt.<br>Wir melden uns schnellstmöglich bei Ihnen.</p>
-        <button id="new-request-btn" onclick="location.reload()" class="mt-8 px-8 py-3 bg-zinc-800 hover:bg-zinc-700 rounded-2xl text-sm font-medium">
-          Neue Anfrage senden
+        <button type="submit" id="submit-btn" class="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-5 rounded-2xl text-lg">
+          Anfrage absenden
         </button>
       </div>
+    </form>
+
+    <!-- Erfolgsmeldung -->
+    <div id="success-message" class="hidden bg-emerald-900/30 border border-emerald-500 p-10 rounded-3xl text-center mt-8">
+      <i class="fa-solid fa-check-circle text-6xl text-emerald-400 mb-6"></i>
+      <h3 id="success-title" class="text-3xl font-bold mb-3">Vielen Dank!</h3>
+      <p id="success-text" class="text-zinc-300 text-lg">Ihre Anfrage wurde erfolgreich übermittelt.<br>Wir melden uns schnellstmöglich bei Ihnen.</p>
+      <button id="new-request-btn" onclick="location.reload()" class="mt-8 px-8 py-3 bg-zinc-800 hover:bg-zinc-700 rounded-2xl text-sm font-medium">
+        Neue Anfrage senden
+      </button>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- Footer -->
   <footer class="bg-zinc-950 py-12 border-t border-zinc-900">
