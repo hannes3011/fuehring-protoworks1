@@ -29,36 +29,33 @@
 </head>
 <body class="bg-zinc-950 text-zinc-200 font-sans">
 
- <!-- Navbar -->
-<nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
-  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-    <div class="flex items-center gap-3">
-      <!-- Logo mit fester Größe -->
-      <img src="images/logo.png" 
-           alt="Fuehring Protoworks Logo" 
-           class="logo-img h-10 w-auto">
-      <span class="text-2xl font-semibold tracking-tight" id="nav-brand">Fuehring Protoworks</span>
-    </div>
-    
-    <div class="hidden md:flex gap-8 text-sm font-medium">
-      <a href="#" class="hover:text-cyan-400" id="nav-home">Home</a>
-      <a href="#materialien" class="hover:text-cyan-400" id="nav-materials">Materialien</a>
-      <a href="#leistungen" class="hover:text-cyan-400" id="nav-services">Leistungen</a>
-      <a href="#kontakt" class="hover:text-cyan-400" id="nav-contact">Kontakt</a>
-    </div>
+  <!-- Navbar -->
+  <nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Fuehring Protoworks Logo" class="logo-img h-10 w-auto">
+        <span class="text-2xl font-semibold tracking-tight" id="nav-brand">Fuehring Protoworks</span>
+      </div>
+      
+      <div class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="#" class="hover:text-cyan-400" id="nav-home">Home</a>
+        <a href="#materialien" class="hover:text-cyan-400" id="nav-materials">Materialien</a>
+        <a href="#leistungen" class="hover:text-cyan-400" id="nav-services">Leistungen</a>
+        <a href="#kontakt" class="hover:text-cyan-400" id="nav-contact">Kontakt</a>
+      </div>
 
-    <div class="flex items-center gap-4">
-      <button onclick="toggleDarkMode()" id="dark-toggle" class="p-2 rounded-lg hover:bg-zinc-800">
-        <i class="fa-solid fa-moon text-xl"></i>
-      </button>
-      <select id="lang-select" onchange="changeLanguage()" class="bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-1 text-sm">
-        <option value="de">DE</option>
-        <option value="en">EN</option>
-        <option value="es">ES</option>
-      </select>
+      <div class="flex items-center gap-4">
+        <button onclick="toggleDarkMode()" id="dark-toggle" class="p-2 rounded-lg hover:bg-zinc-800">
+          <i class="fa-solid fa-moon text-xl"></i>
+        </button>
+        <select id="lang-select" onchange="changeLanguage()" class="bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-1 text-sm">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+        </select>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
 
   <!-- Hero -->
   <section class="hero-bg h-screen flex items-center relative overflow-hidden">
@@ -135,7 +132,7 @@
       </div>
 
       <form id="contact-form" 
-            action="https://hooks.zapier.com/hooks/catch/27011790/unkt2qj/" 
+            action="https://formspree.io/f/xaqlokqe" 
             method="POST" 
             class="bg-zinc-900 p-10 rounded-3xl">
         <div class="space-y-6">
@@ -152,7 +149,7 @@
         </div>
       </form>
 
-      <!-- Eigene Erfolgsmeldung (mehrsprachig) -->
+      <!-- Eigene Erfolgsmeldung -->
       <div id="success-message" class="hidden bg-emerald-900/30 border border-emerald-500 p-10 rounded-3xl text-center mt-8">
         <i class="fa-solid fa-check-circle text-6xl text-emerald-400 mb-6"></i>
         <h3 id="success-title" class="text-3xl font-bold mb-3">Vielen Dank!</h3>
@@ -226,7 +223,7 @@
   </div>
 
   <script>
-    // ==================== Vollständige Übersetzungen ====================
+    // ==================== Übersetzungen ====================
     const translations = {
       de: {
         navBrand: "Fuehring Protoworks", navHome: "Home", navMaterials: "Materialien", navServices: "Leistungen", navContact: "Kontakt",
@@ -350,7 +347,6 @@
       const lang = document.getElementById('lang-select').value;
       const t = translations[lang];
 
-      // Alle Texte aktualisieren
       document.getElementById('nav-brand').textContent = t.navBrand;
       document.getElementById('nav-home').textContent = t.navHome;
       document.getElementById('nav-materials').textContent = t.navMaterials;
@@ -377,13 +373,12 @@
       document.getElementById('footer-impressum').textContent = t.footerImpressum;
       document.getElementById('footer-made').textContent = t.footerMade;
 
-      // Kontakt-Formular
       document.getElementById('input-name').placeholder = t.inputName || "Name *";
       document.getElementById('input-email').placeholder = t.inputEmail || "E-Mail *";
       document.getElementById('input-firma').placeholder = t.inputFirma || "Firma (optional)";
       document.getElementById('input-nachricht').placeholder = t.inputNachricht || "Beschreibung Ihres Projekts *";
 
-      // Erfolgsmeldung mehrsprachig
+      // Erfolgsmeldung übersetzen
       document.getElementById('success-title').textContent = t.successTitle;
       document.getElementById('success-text').innerHTML = t.successText;
 
