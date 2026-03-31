@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="de" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO -->
+  <title>Fuehring Protoworks | 3D-Druck Prototypen & Kleinserien Österreich</title>
+  <meta name="description" content="Professioneller 3D-Druck Service für Prototypen, Funktionsmuster und Kleinserien. FDM-Druck mit PLA, PETG, PA-CF, PEEK und mehr. Schnell, präzise und zuverlässig.">
+  <meta name="keywords" content="3D-Druck, Prototypen, FDM 3D-Druck, Kleinserien, PA-CF, PEEK, PPS-CF, Rapid Prototyping, Österreich">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.fprotoworks.com/">
+
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+  <style>
+    .hero-bg {
+      background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.92)), url('images/hero.jpg') center/cover no-repeat;
+      background-attachment: fixed;
+    }
+    @media (max-width: 768px) {
+      .hero-bg { background-attachment: scroll; }
+    }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-200 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <img src="images/logo.png" alt="Fuehring Protoworks Logo" class="logo-img">
+        <span class="text-2xl font-semibold tracking-tight" id="nav-brand">Fuehring Protoworks</span>
+      </div>
+      
+      <div class="hidden md:flex gap-8 text-sm font-medium">
+        <a href="#" class="hover:text-cyan-400" id="nav-home">Home</a>
+        <a href="#materialien" class="hover:text-cyan-400" id="nav-materials">Materialien</a>
+        <a href="#leistungen" class="hover:text-cyan-400" id="nav-services">Leistungen</a>
+        <a href="#kontakt" class="hover:text-cyan-400" id="nav-contact">Kontakt</a>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button onclick="toggleDarkMode()" id="dark-toggle" class="p-2 rounded-lg hover:bg-zinc-800">
+          <i class="fa-solid fa-moon text-xl"></i>
+        </button>
+        <select id="lang-select" onchange="changeLanguage()" class="bg-zinc-900 border border-zinc-700 rounded-lg px-3 py-1 text-sm">
+          <option value="de">DE</option>
+          <option value="en">EN</option>
+          <option value="es">ES</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-bg h-screen flex items-center relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-6 text-center z-10">
+      <div class="inline-flex items-center gap-2 bg-zinc-900/80 px-6 py-2 rounded-full mb-8 border border-cyan-500/30">
+        <div class="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
+        <span class="text-sm font-medium tracking-widest" id="hero-tagline">3D DRUCK • PROTOTYPEN • SERIENFERTIGUNG</span>
+      </div>
+      
+      <h1 id="hero-title" class="text-5xl md:text-7xl font-bold leading-tight mb-6 tracking-tighter">
+        Präzise Prototypen.<br>Perfekte Fertigung.
+      </h1>
+      <p id="hero-subtitle" class="text-lg md:text-2xl text-zinc-400 max-w-2xl mx-auto mb-12">
+        Von der Idee zum funktionsfähigen Prototypen – schnell, hochwertig und in allen gängigen FDM-Materialien.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#kontakt" id="btn-start" class="px-10 py-4 bg-cyan-500 hover:bg-cyan-400 transition text-black font-semibold rounded-2xl text-lg">Jetzt Projekt anfragen</a>
+        <a href="#materialien" id="btn-materials" class="px-10 py-4 border border-zinc-600 hover:border-zinc-400 transition font-semibold rounded-2xl text-lg">Materialien entdecken</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leistungen -->
+  <section id="leistungen" class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 id="section-services" class="text-4xl font-bold text-center mb-16">Was wir für Sie tun</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-zinc-950 p-10 rounded-3xl border border-zinc-800 hover:border-cyan-500/50 transition">
+          <h3 id="service1-title" class="text-2xl font-semibold mb-4">Design & Entwicklung</h3>
+          <p id="service1-desc" class="text-zinc-400">CAD-Design, Optimierung für den 3D-Druck und funktionsfähige Prototypen.</p>
+        </div>
+        <div class="bg-zinc-950 p-10 rounded-3xl border border-zinc-800 hover:border-cyan-500/50 transition">
+          <h3 id="service2-title" class="text-2xl font-semibold mb-4">Prototypenfertigung</h3>
+          <p id="service2-desc" class="text-zinc-400">Schnelle Iterationen mit hoher Präzision – ab 0,05 mm Schichthöhe.</p>
+        </div>
+        <div class="bg-zinc-950 p-10 rounded-3xl border border-zinc-800 hover:border-cyan-500/50 transition">
+          <h3 id="service3-title" class="text-2xl font-semibold mb-4">Klein- & Großserien</h3>
+          <p id="service3-desc" class="text-zinc-400">Zuverlässige Produktion von 1 bis mehreren tausend Teilen.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Materialien -->
+  <section id="materialien" class="py-24">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 id="section-materials" class="text-4xl font-bold text-center mb-6">FDM-Materialien</h2>
+      <p id="materials-subtitle" class="text-center text-zinc-400 mb-16 max-w-2xl mx-auto">Wir drucken mit allen gängigen und hochtechnischen Filamenten.</p>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="material-grid"></div>
+    </div>
+  </section>
+
+  <!-- Galerie -->
+  <section class="py-24 bg-zinc-900">
+    <div class="max-w-7xl mx-auto px-6">
+      <h2 id="section-gallery" class="text-4xl font-bold text-center mb-16">Unsere Prototypen in der Praxis</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <img src="images/prototyp1.jpg" class="gallery-img rounded-3xl aspect-square object-cover" alt="3D gedruckter Prototyp 1">
+        <img src="images/prototyp2.jpg" class="gallery-img rounded-3xl aspect-square object-cover" alt="3D gedruckter Prototyp 2">
+        <img src="images/prototyp3.jpg" class="gallery-img rounded-3xl aspect-square object-cover" alt="3D gedruckter Prototyp 3">
+        <img src="images/prototyp4.jpg" class="gallery-img rounded-3xl aspect-square object-cover" alt="3D gedruckter Prototyp 4">
+      </div>
+    </div>
+  </section>
+
+  <!-- Kontakt -->
+  <section id="kontakt" class="py-24 bg-black">
+    <div class="max-w-2xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 id="contact-title" class="text-4xl font-bold mb-4">Projekt starten</h2>
+        <p id="slogan" class="text-3xl font-medium text-cyan-400">"Red ma drüber"</p>
+        <p id="contact-subtitle" class="text-zinc-400 mt-2">Egal ob Idee, Skizze oder fertiges CAD – wir sprechen darüber und machen es real.</p>
+      </div>
+
+      <form id="contact-form" 
+            action="https://hooks.zapier.com/hooks/catch/27011790/unkt2qj/" 
+            method="POST" 
+            class="bg-zinc-900 p-10 rounded-3xl">
+        <div class="space-y-6">
+          <input type="text" name="name" id="input-name" placeholder="Name *" required class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl">
+          <input type="email" name="email" id="input-email" placeholder="E-Mail *" required class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl">
+          <input type="text" name="firma" id="input-firma" placeholder="Firma (optional)" class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl">
+          <textarea name="nachricht" id="input-nachricht" rows="6" placeholder="Beschreibung Ihres Projekts *" required class="w-full p-4 bg-zinc-950 border border-zinc-700 rounded-2xl"></textarea>
+          
+          <input type="hidden" name="source" value="Website">
+
+          <button type="submit" id="submit-btn" class="w-full bg-cyan-500 hover:bg-cyan-400 text-black font-bold py-5 rounded-2xl text-lg">
+            Anfrage absenden
+          </button>
+        </div>
+      </form>
+
+      <!-- Eigene Erfolgsmeldung (mehrsprachig) -->
+      <div id="success-message" class="hidden bg-emerald-900/30 border border-emerald-500 p-10 rounded-3xl text-center mt-8">
+        <i class="fa-solid fa-check-circle text-6xl text-emerald-400 mb-6"></i>
+        <h3 id="success-title" class="text-3xl font-bold mb-3">Vielen Dank!</h3>
+        <p id="success-text" class="text-zinc-300 text-lg">Ihre Anfrage wurde erfolgreich übermittelt.<br>Wir melden uns schnellstmöglich bei Ihnen.</p>
+        <button onclick="location.reload()" class="mt-8 px-8 py-3 bg-zinc-800 hover:bg-zinc-700 rounded-2xl text-sm font-medium">
+          Neue Anfrage senden
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-950 py-12 border-t border-zinc-900">
+    <div class="max-w-7xl mx-auto px-6 text-center text-sm text-zinc-500">
+      <p>© 2026 Fuehring Protoworks • 
+         <a href="#" onclick="showImpressum()" class="hover:text-zinc-300" id="footer-impressum">Impressum</a> • 
+         <a href="#" onclick="showCookiePolicy()" class="hover:text-zinc-300">Cookie-Richtlinie</a></p>
+      <p class="mt-2" id="footer-made">Hochpräziser FDM 3D-Druck • Made in Austria • Made in Spain</p>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-zinc-900 border-t border-zinc-700 p-5 hidden z-[9999]">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-sm">
+      <p class="text-zinc-400">
+        Diese Website verwendet Cookies für die Funktionalität und Odoo-Tracking.
+        <a href="#" onclick="showCookiePolicy()" class="underline hover:text-white">Mehr erfahren</a>
+      </p>
+      <div class="flex gap-3">
+        <button onclick="acceptNecessary()" class="bg-zinc-700 hover:bg-zinc-600 px-6 py-3 rounded-2xl">Nur notwendige</button>
+        <button onclick="acceptAll()" class="bg-cyan-500 hover:bg-cyan-400 text-black px-6 py-3 rounded-2xl font-semibold">Alle akzeptieren</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cookie Policy Modal -->
+  <div id="cookie-modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[10000]">
+    <div class="bg-zinc-900 rounded-3xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-auto p-8">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-3xl font-bold">Cookie-Richtlinie</h2>
+        <button onclick="hideCookiePolicy()" class="text-3xl text-zinc-400 hover:text-white">×</button>
+      </div>
+      <p class="text-zinc-400 leading-relaxed">
+        <strong>Notwendige Cookies:</strong> Für Dark Mode, Sprache und Formularfunktion.<br><br>
+        <strong>Tracking-Cookies (Odoo):</strong> Wir nutzen Odoo Visitor Tracking, um Besucheraktivitäten zu analysieren und Leads besser zuzuordnen.<br><br>
+        Mit „Alle akzeptieren“ stimmen Sie der Verwendung von Tracking-Cookies zu.
+      </p>
+      <button onclick="hideCookiePolicy()" class="mt-8 w-full bg-cyan-500 hover:bg-cyan-400 text-black py-4 rounded-2xl font-semibold">
+        Verstanden
+      </button>
+    </div>
+  </div>
+
+  <!-- Impressum Modal -->
+  <div id="impressum-modal" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-[10000]">
+    <div class="bg-zinc-900 rounded-3xl max-w-2xl w-full mx-4 max-h-[90vh] overflow-auto p-8">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-3xl font-bold">Impressum</h2>
+        <button onclick="hideImpressum()" class="text-3xl text-zinc-400 hover:text-white">×</button>
+      </div>
+      <div class="text-zinc-400 leading-relaxed">
+        <strong>Fuehring Protoworks</strong><br>
+        Inhaber: Lisa Führinger<br>
+        7011 Siegendorf, Flurgasse 109<br>
+        Österreich<br><br>
+        E-Mail: office@fprotoworks.com<br>
+        Verantwortlich für den Inhalt: Lisa Führinger
+      </div>
+      <button onclick="hideImpressum()" class="mt-8 w-full bg-zinc-800 hover:bg-zinc-700 py-4 rounded-2xl">Schließen</button>
+    </div>
+  </div>
+
+  <script>
+    // ==================== Vollständige Übersetzungen ====================
+    const translations = {
+      de: {
+        navBrand: "Fuehring Protoworks", navHome: "Home", navMaterials: "Materialien", navServices: "Leistungen", navContact: "Kontakt",
+        heroTagline: "3D DRUCK • PROTOTYPEN • SERIENFERTIGUNG",
+        heroTitle: "Präzise Prototypen.<br>Perfekte Fertigung.",
+        heroSubtitle: "Von der Idee zum funktionsfähigen Prototypen – schnell, hochwertig und in allen gängigen FDM-Materialien.",
+        btnStart: "Jetzt Projekt anfragen", btnMaterials: "Materialien entdecken",
+        sectionServices: "Was wir für Sie tun",
+        service1Title: "Design & Entwicklung", service1Desc: "CAD-Design, Optimierung für den 3D-Druck und funktionsfähige Prototypen.",
+        service2Title: "Prototypenfertigung", service2Desc: "Schnelle Iterationen mit hoher Präzision – ab 0,05 mm Schichthöhe.",
+        service3Title: "Klein- & Großserien", service3Desc: "Zuverlässige Produktion von 1 bis mehreren tausend Teilen.",
+        sectionMaterials: "FDM-Materialien", materialsSubtitle: "Wir drucken mit allen gängigen und hochtechnischen Filamenten.",
+        sectionGallery: "Unsere Prototypen in der Praxis",
+        contactTitle: "Projekt starten", slogan: "\"Red ma drüber\"",
+        contactSubtitle: "Egal ob Idee, Skizze oder fertiges CAD – wir sprechen darüber und machen es real.",
+        inputName: "Name *", inputEmail: "E-Mail *", inputFirma: "Firma (optional)", 
+        inputNachricht: "Beschreibung Ihres Projekts *", submitBtn: "Anfrage absenden",
+        successTitle: "Vielen Dank!", 
+        successText: "Ihre Anfrage wurde erfolgreich übermittelt.<br>Wir melden uns schnellstmöglich bei Ihnen.",
+        footerImpressum: "Impressum", footerMade: "Hochpräziser FDM 3D-Druck • Made in Austria • Made in Spain"
+      },
+      en: {
+        navBrand: "Fuehring Protoworks", navHome: "Home", navMaterials: "Materials", navServices: "Services", navContact: "Contact",
+        heroTagline: "3D PRINTING • PROTOTYPES • SERIES PRODUCTION",
+        heroTitle: "Precise Prototypes.<br>Perfect Production.",
+        heroSubtitle: "From idea to functional prototype – fast, high-quality and in all common FDM materials.",
+        btnStart: "Start Project Now", btnMaterials: "Discover Materials",
+        sectionServices: "What We Do For You",
+        service1Title: "Design & Development", service1Desc: "CAD design, optimization for 3D printing and functional prototypes.",
+        service2Title: "Prototype Manufacturing", service2Desc: "Fast iterations with high precision – from 0.05 mm layer height.",
+        service3Title: "Small & Large Series", service3Desc: "Reliable production from 1 to several thousand parts.",
+        sectionMaterials: "FDM Materials", materialsSubtitle: "We print with all common and high-tech filaments.",
+        sectionGallery: "Our Prototypes in Practice",
+        contactTitle: "Start a Project", slogan: "\"Let's talk about it\"",
+        contactSubtitle: "Whether idea, sketch or finished CAD – we talk about it and make it real.",
+        inputName: "Name *", inputEmail: "Email *", inputFirma: "Company (optional)", 
+        inputNachricht: "Project description *", submitBtn: "Send request",
+        successTitle: "Thank you!", 
+        successText: "Your request has been successfully sent.<br>We will get back to you as soon as possible.",
+        footerImpressum: "Imprint", footerMade: "High-precision FDM 3D Printing • Made in Austria • Made in Spain"
+      },
+      es: {
+        navBrand: "Fuehring Protoworks", navHome: "Inicio", navMaterials: "Materiales", navServices: "Servicios", navContact: "Contacto",
+        heroTagline: "IMPRESIÓN 3D • PROTOTIPOS • PRODUCCIÓN EN SERIE",
+        heroTitle: "Prototipos precisos.<br>Fabricación perfecta.",
+        heroSubtitle: "De la idea al prototipo funcional – rápido, de alta calidad y en todos los materiales FDM comunes.",
+        btnStart: "Iniciar Proyecto Ahora", btnMaterials: "Descubrir Materiales",
+        sectionServices: "Qué hacemos por usted",
+        service1Title: "Diseño y Desarrollo", service1Desc: "Diseño CAD, optimización para impresión 3D y prototipos funcionales.",
+        service2Title: "Fabricación de Prototipos", service2Desc: "Iteraciones rápidas con alta precisión – desde 0,05 mm de altura de capa.",
+        service3Title: "Series Pequeñas y Grandes", service3Desc: "Producción confiable de 1 a varios miles de piezas.",
+        sectionMaterials: "Materiales FDM", materialsSubtitle: "Imprimimos con todos los filamentos comunes y de alta tecnología.",
+        sectionGallery: "Nuestros prototipos en la práctica",
+        contactTitle: "Iniciar un Proyecto", slogan: "\"Hablemos de ello\"",
+        contactSubtitle: "Ya sea idea, boceto oder CAD terminado – hablamos de ello y lo hacemos realidad.",
+        inputName: "Nombre *", inputEmail: "Correo electrónico *", inputFirma: "Empresa (opcional)", 
+        inputNachricht: "Descripción de su proyecto *", submitBtn: "Enviar solicitud",
+        successTitle: "¡Gracias!", 
+        successText: "Su solicitud ha sido enviada con éxito.<br>Nos pondremos en contacto con usted lo antes posible.",
+        footerImpressum: "Aviso Legal", footerMade: "Impresión 3D FDM de alta precisión • Hecho en Austria • Hecho en España"
+      }
+    };
+
+    const materials = {
+      de: [
+        {name: "PLA", desc: "Einfach zu drucken, ideal für visuelle Prototypen", color: "text-green-400"},
+        {name: "PETG", desc: "Robust, chemikalienbeständig und sehr fest", color: "text-blue-400"},
+        {name: "ABS", desc: "Hohe Schlagfestigkeit, gut nachbearbeitbar", color: "text-orange-400"},
+        {name: "ASA", desc: "Wetter- und UV-beständig", color: "text-amber-400"},
+        {name: "TPU", desc: "Flexibel und gummiartig", color: "text-purple-400"},
+        {name: "Nylon (PA)", desc: "Extrem zäh und verschleißfest", color: "text-red-400"},
+        {name: "PC", desc: "Höchste Schlag- und Hitzebeständigkeit", color: "text-cyan-400"},
+        {name: "PA-CF", desc: "Kohlefaser-verstärkt, extrem steif und fest", color: "text-cyan-400"},
+        {name: "PETG-CF", desc: "Kohlefaser-verstärktes PETG, hohe Steifigkeit", color: "text-cyan-400"},
+        {name: "PPS-CF", desc: "Hochtemperaturbeständig, chemikalienresistent, sehr steif", color: "text-amber-400"},
+        {name: "PEEK", desc: "Höchstleistungsmaterial, extrem hitze- und chemikalienbeständig", color: "text-red-400"},
+        {name: "PEI (Ultem)", desc: "Hochtemperaturbeständig, flammhemmend, sehr stabil", color: "text-orange-400"}
+      ],
+      en: [
+        {name: "PLA", desc: "Easy to print, ideal for visual prototypes", color: "text-green-400"},
+        {name: "PETG", desc: "Robust, chemical resistant and very strong", color: "text-blue-400"},
+        {name: "ABS", desc: "High impact resistance, good for post-processing", color: "text-orange-400"},
+        {name: "ASA", desc: "Weather and UV resistant", color: "text-amber-400"},
+        {name: "TPU", desc: "Flexible and rubber-like", color: "text-purple-400"},
+        {name: "Nylon (PA)", desc: "Extremely tough and wear-resistant", color: "text-red-400"},
+        {name: "PC", desc: "Highest impact and heat resistance", color: "text-cyan-400"},
+        {name: "PA-CF", desc: "Carbon fiber reinforced, extremely stiff", color: "text-cyan-400"},
+        {name: "PETG-CF", desc: "Carbon fiber reinforced PETG, high stiffness", color: "text-cyan-400"},
+        {name: "PPS-CF", desc: "High temperature resistant, chemical resistant, very stiff", color: "text-amber-400"},
+        {name: "PEEK", desc: "High-performance material, extreme heat and chemical resistance", color: "text-red-400"},
+        {name: "PEI (Ultem)", desc: "High temperature resistant, flame retardant, very stable", color: "text-orange-400"}
+      ],
+      es: [
+        {name: "PLA", desc: "Fácil de imprimir, ideal für prototipos visuales", color: "text-green-400"},
+        {name: "PETG", desc: "Robusto, resistente a químicos y muy fuerte", color: "text-blue-400"},
+        {name: "ABS", desc: "Alta resistencia al impacto", color: "text-orange-400"},
+        {name: "ASA", desc: "Resistente a la intemperie y UV", color: "text-amber-400"},
+        {name: "TPU", desc: "Flexible tipo goma", color: "text-purple-400"},
+        {name: "Nylon (PA)", desc: "Extremadamente tenaz y resistente al desgaste", color: "text-red-400"},
+        {name: "PC", desc: "Máxima resistencia al impacto y calor", color: "text-cyan-400"},
+        {name: "PA-CF", desc: "Reforzado con fibra de carbono", color: "text-cyan-400"},
+        {name: "PETG-CF", desc: "PETG reforzado con fibra de carbono", color: "text-cyan-400"},
+        {name: "PPS-CF", desc: "Resistente a altas temperaturas, químico resistente", color: "text-amber-400"},
+        {name: "PEEK", desc: "Material de alto rendimiento, resistencia extrema al calor", color: "text-red-400"},
+        {name: "PEI (Ultem)", desc: "Resistente a altas temperaturas, ignífugo", color: "text-orange-400"}
+      ]
+    };
+
+    function renderMaterials(lang) {
+      const grid = document.getElementById('material-grid');
+      grid.innerHTML = '';
+      materials[lang].forEach(mat => {
+        const card = document.createElement('div');
+        card.className = `bg-zinc-900 p-8 rounded-3xl border border-zinc-800 hover:border-cyan-500/50 transition-all`;
+        card.innerHTML = `<h3 class="text-3xl font-bold mb-3 ${mat.color}">${mat.name}</h3><p class="text-zinc-400">${mat.desc}</p>`;
+        grid.appendChild(card);
+      });
+    }
+
+    function changeLanguage() {
+      const lang = document.getElementById('lang-select').value;
+      const t = translations[lang];
+
+      // Alle Texte aktualisieren
+      document.getElementById('nav-brand').textContent = t.navBrand;
+      document.getElementById('nav-home').textContent = t.navHome;
+      document.getElementById('nav-materials').textContent = t.navMaterials;
+      document.getElementById('nav-services').textContent = t.navServices;
+      document.getElementById('nav-contact').textContent = t.navContact;
+      document.getElementById('hero-tagline').textContent = t.heroTagline;
+      document.getElementById('hero-title').innerHTML = t.heroTitle;
+      document.getElementById('hero-subtitle').textContent = t.heroSubtitle;
+      document.getElementById('btn-start').textContent = t.btnStart;
+      document.getElementById('btn-materials').textContent = t.btnMaterials;
+      document.getElementById('section-services').textContent = t.sectionServices;
+      document.getElementById('service1-title').textContent = t.service1Title;
+      document.getElementById('service1-desc').textContent = t.service1Desc;
+      document.getElementById('service2-title').textContent = t.service2Title;
+      document.getElementById('service2-desc').textContent = t.service2Desc;
+      document.getElementById('service3-title').textContent = t.service3Title;
+      document.getElementById('service3-desc').textContent = t.service3Desc;
+      document.getElementById('section-materials').textContent = t.sectionMaterials;
+      document.getElementById('materials-subtitle').textContent = t.materialsSubtitle;
+      document.getElementById('section-gallery').textContent = t.sectionGallery;
+      document.getElementById('contact-title').textContent = t.contactTitle;
+      document.getElementById('slogan').textContent = t.slogan;
+      document.getElementById('contact-subtitle').textContent = t.contactSubtitle;
+      document.getElementById('footer-impressum').textContent = t.footerImpressum;
+      document.getElementById('footer-made').textContent = t.footerMade;
+
+      // Kontakt-Formular
+      document.getElementById('input-name').placeholder = t.inputName || "Name *";
+      document.getElementById('input-email').placeholder = t.inputEmail || "E-Mail *";
+      document.getElementById('input-firma').placeholder = t.inputFirma || "Firma (optional)";
+      document.getElementById('input-nachricht').placeholder = t.inputNachricht || "Beschreibung Ihres Projekts *";
+
+      // Erfolgsmeldung mehrsprachig
+      document.getElementById('success-title').textContent = t.successTitle;
+      document.getElementById('success-text').innerHTML = t.successText;
+
+      renderMaterials(lang);
+    }
+
+    function toggleDarkMode() {
+      document.documentElement.classList.toggle('dark');
+      const icon = document.querySelector('#dark-toggle i');
+      icon.classList.toggle('fa-moon');
+      icon.classList.toggle('fa-sun');
+    }
+
+    function acceptNecessary() {
+      localStorage.setItem('cookieConsent', 'necessary');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    function acceptAll() {
+      localStorage.setItem('cookieConsent', 'all');
+      document.getElementById('cookie-banner').classList.add('hidden');
+    }
+
+    function showCookiePolicy() {
+      document.getElementById('cookie-modal').classList.remove('hidden');
+    }
+    function hideCookiePolicy() {
+      document.getElementById('cookie-modal').classList.add('hidden');
+    }
+
+    function showImpressum() {
+      document.getElementById('impressum-modal').classList.remove('hidden');
+    }
+    function hideImpressum() {
+      document.getElementById('impressum-modal').classList.add('hidden');
+    }
+
+    // Formular-Handling mit eigener Erfolgsmeldung
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('success-message');
+    const submitBtn = document.getElementById('submit-btn');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      submitBtn.innerHTML = 'Wird gesendet...';
+      submitBtn.disabled = true;
+
+      setTimeout(() => {
+        form.style.display = 'none';
+        successMsg.classList.remove('hidden');
+      }, 800);
+    });
+
+    // Init
+    window.onload = () => {
+      changeLanguage();
+      document.querySelector('#dark-toggle i').classList.add('fa-moon');
+
+      if (!localStorage.getItem('cookieConsent')) {
+        document.getElementById('cookie-banner').classList.remove('hidden');
+      }
+    };
+  </script>
+</body>
+</html>
